@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+    <style>
+        /* Add some basic styling for the cards */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 200px;
+            overflow: hidden;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        .card-text {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="product-container"></div>
+
+<script>
+    const products = [
+        { image: "images/popular product/smart watch.png", name: 'Smart Watch', price: '999.00' },
+        { image: "images/popular product/neck.png", name: 'Headphones', price: '499.00' },
+        { image: "images/popular product/watch.png", name: 'Laptop', price: '35,999.00' },
+        { image: "images/popular product/power bank.png", name: 'Tablet', price: '7,999.00' }
+    ];
+
+    const container = document.getElementById('product-container');
+
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        card.innerHTML = `
+            <a href="#">
+                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                <div class="card-body">
+                    <p class="card-text"><span>${product.name}</span></p>
+                    <p>Starts from &#x20b9; ${product.price}</p>
+                </div>
+            </a>
+        `;
+        
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>

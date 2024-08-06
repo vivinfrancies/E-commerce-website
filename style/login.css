@@ -1,0 +1,333 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color:  #FFD700;
+}
+
+#login{
+    padding-top: 7%;
+    padding-bottom: 2%;
+}
+
+/* Log in card */
+
+.login_card{
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 30px 5px #FFD700;
+    border-radius: 2%;
+    background: transparent;
+}
+.card_left{
+    background-color: rgb(0, 0, 0);
+    color: #FFD700;   
+    border-radius: 2%; 
+}
+.head{
+    font-size: xx-large;
+    padding-left: 20%;
+    margin-top: 15%;
+    margin-bottom: 2%;
+}
+
+.card_left p{
+    font-size:large;
+    padding-left: 20%;
+}
+.card_right{
+    background-color: #FFD700;
+    color: rgb(0, 0, 0);
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+#checkboxshow{
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+.New_login{
+    margin-top: 10%;
+}
+
+.New_login a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.mobile_login{
+    display: none;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.login_btn{
+    background-color: black;
+    color: #FFD700;
+    display: block;
+}
+
+.login_btn:hover{
+    color: azure;
+}
+
+#login_err{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: red;
+    font-weight: 700;
+}
+
+.log_img{
+    width: 100%;
+  }
+@media only screen and (max-width: 767px) {
+    .card_left{
+        display:none;
+    }
+    .title{
+        text-align:start;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+    .mobile_login{
+        display: block;
+        margin-top: 40px;
+    }
+    .card_right{
+        margin-top: 35%;
+        padding-bottom: 5%;
+        border-radius: 2%;
+    }
+    .login_card{
+        width: 60%;
+        margin-left: 20%;
+        border-radius: 0%;
+        border-color: black;
+        box-shadow:none;
+        background: transparent;
+    }
+
+    .New_login{
+        margin-top: 15%;
+    }
+}
+
+/* Email */
+/* Input container */
+.input-container-email{
+  position: relative;
+  margin-top: 20%;
+  margin-left: 20px;
+}
+
+/* Input field */
+.input-field-email{
+  display: block;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #616161;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label-email{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight-email{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field-email:focus + .input-label-email{
+  top: -20px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.input-field-email:focus + .input-label-email + .input-highlight-email {
+  width: 80%;
+}
+
+  /* password */
+  /* Input container */
+.input-container-password{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  
+  /* Input field */
+  .input-field-password{
+    display: block;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #616161;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  /* Input label */
+  .input-label-password{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input highlight */
+  .input-highlight-password{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #000000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input field:focus styles */
+  .input-field-password:focus + .input-label-password{
+    top: -20px;
+    font-size: 12px;
+    color: #000000;
+  }
+  
+  .input-field-password:focus + .input-label-password + .input-highlight-password {
+    width: 80%;
+  }
+
+  
+  .checkbox[type="checkbox"] {
+    accent-color: #FFD700;
+  }
+
+  #new_user{
+    width: 60%;
+    background-color: #000000;
+    color: #FFD700;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 30px;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 30px 5px #FFD700;
+    border-radius: 2%;
+    margin-bottom: 50px;  
+  }
+
+  .new_user_img{
+    position: absolute;
+    height: auto;
+    width: 35%;
+    opacity: .7;
+  }
+
+  .index{
+    position: relative;
+    z-index: 1;
+  }
+  /* new_user_head */
+  .new_user_head{
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+/* lable */
+.new_user_lable{
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 30px;
+  font-weight: 600;
+}
+
+.new_user_lable1{
+  color: #000000;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 30px;
+  font-weight: 600;
+}
+
+/* First name */
+  .input-wrapper_first_name {
+    position: relative;
+    padding-top: 20px;
+  }
+  
+  .input-box_first_name{
+    font-size: 16px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #868686;
+    color: #FFD700;
+    width: 80%;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .underline_first_name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0c0c0c;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .input-box_first_name:focus {
+    border-color: #ad9508;
+    outline: none;
+  }
+  
+  .input-box_first_name:focus + .underline {
+    transform: scaleX(1);
+  }
+  
+  /* Sign_up_btn */
+  
+  .Sign_up_btn{
+    background-color: #FFD700;
+    color: #000000;
+    width: 180px;
+  }
+
+  .Sign_up_btn:hover{
+    background-color: #FFD700;
+    color: #5f5f5f;
+  }
+  
+

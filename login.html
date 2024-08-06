@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ding Dong</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <section id="sec_navbar">
+        <nav class="navbar navbar-expand-lg fixed-top nav">
+            <div class="navbar-brand" href="#">
+                <img src="images/logo1.png" class="logo_img">Ding Dong
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active home_btn" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <form class="d-flex search_bar">
+                        <input class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search">
+                        <button class="btn" type="submit"><i
+                                class="fa-solid fa-magnifying-glass search_icon"></i></button>
+                    </form>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#login">
+                            <div id="login_id"><i class="fa-solid fa-user login_icon"></i>Login </div>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"><i
+                                class="fa-solid fa-cart-shopping cart_icon"></i></i>Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" id="location_nav" aria-current="page" href="#"><i
+                                class="fa-solid fa-location-dot location_icon"></i><label class="location">Deliver only
+                                India</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- LoG IN Card -->
+    <section id="login">
+        <div class="row login_card">
+            <div class="col-lg-6 col-md-6 col-sm-12 card_left">
+                <div class="head">Login</div>
+                <p>Get access to your Orders,</p>
+                <p>Wishlist and Recommendations</p>
+                <img src="images/login/ecommerce-pros-cons-poster-01-removebg.png " class="log_img" alt="">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 card_right">
+                <div class="mobile_login">
+                    <p>Log in</p>
+                </div>
+                <div class="input-container-email">
+                    <input placeholder="Enter email Id" id="email" class="input-field-email" type="text">
+                    <label for="input-field" class="input-label-email">Enter the Email ID :</label>
+                    <span class="input-highlight"></span>
+                </div>
+                <div class="input-container-password">
+                    <input placeholder="Password" id="password" class="input-field-password" type="password"
+                        minlength="8">
+                    <label for="input-field" class="input-label-password">Password :</label>
+                    <span class="input-highlight-password"></span>
+                </div>
+                <div id="login_err"></div>
+                <p><input type="checkbox" id="checkboxshow" class="checkbox" onclick="showpassword()">Show password</p>
+                <div class="btn login_btn" onclick="login()">Log in</div>
+                <div class="New_login">
+                    <a href="#new_user" onclick="new_user()">
+                        <p>New to DING DONG? Create an account</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New User login -->
+    <section id="new_user" hidden>
+        <div ><img class="new_user_img" src="style/login.png" alt=""></div>
+        <div class="index">
+            <div class="new_user_head">
+                Sign Up
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>First Name:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="text" placeholder="Enter your First Name">
+                    <span class="underline_first_name"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>Last Name:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="text" placeholder="Enter your Last Name">
+                    <span class="underline_first_name"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>E-mail:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="email" placeholder="Enter your Email">
+                    <span class="underline_first_name"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>Phone Number:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="number" placeholder="Enter your Phone Number">
+                    <span class="underline_first_name"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>Password:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="password" placeholder="Enter your Password">
+                    <span class="underline_first_name"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 new_user_lable">
+                    <label>Confirm-Password:</label>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 input-wrapper_first_name">
+                    <input class="input-box_first_name" type="password" placeholder="Re-enter the Password">
+                    <span class="underline_first_name"></span>
+                    <p><input type="checkbox" id="checkboxshow" class="checkbox" onclick="showpassword()">Show password
+                    </p>
+                </div>
+            </div>
+
+            <div class="row position-relative">
+                <div class="col-lg-5 col-md-5 col-sm-5"></div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="btn Sign_up_btn">Sign Up</div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5"></div>
+            </div>
+            <div class="mx-auto" style="width: 200px;">
+            </div>
+            <div class="col align-self-center">
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Footer-->
+    <section id="footer">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-12">
+                    <h5>About us</h5>
+                    <p><a href="">Contact Us</a></p>
+                    <p><a href="">About Us</a></p>
+                    <p><a href="">Careers</a></p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12">
+                    <h5>Company Group</h5>
+                    <p><a href="">Ding Dong Pvt Limited</a></p>
+                    <p><a href="">E-commerce Site</a></p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12">
+                    <h5>Help</h5>
+                    <p><a href="">Payments</a></p>
+                    <p><a href="">Shipping</a></p>
+                    <p><a href="">Cancellation & Returns</a></p>
+                    <p><a href="">FAQ</a></p>
+                    <p><a href="">Reports Infringement</a></p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <h5>Consumer Policy</h5>
+                    <p><a href="">Terms Of use</a></p>
+                    <p><a href="">Security</a></p>
+                    <p><a href="">Privacy</a></p>
+                    <p><a href="">Sitemap</a></p>
+                    <p><a href="">Cancellation & Returns</a></p>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="col-lg-2 col-lg-2 col-sm-12 social_media">
+                    <h5>Reach Us on Social Meadia</h5>
+                    <a href=""><i class="fa-brands fa-facebook fa-2xl facbook_icon"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram fa-2xl instgram_icon"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter fa-2xl x_icon"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row footer_bottom">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <a href=""><i class="fa-solid fa-shop fa-lg shop_icon"></i>Become A Seller</a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <a href=""><i class="fa-solid fa-gift fa-lg gift_icon"></i>Gift Cards</a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <a href=""><i class="fa-regular fa-circle-question fa-lg help_icon"></i>Help Center</a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <a href=""><i class="fa-regular fa-copyright fa-lg copyright"></i></a>
+                </div>
+            </div>
+            <button id="scrollUpBtn"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="script/login.js"></script>
+
+</html>
